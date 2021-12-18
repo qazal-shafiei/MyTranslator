@@ -1,0 +1,6 @@
+com/example/mytranslator/BuildConfig.java
+ com.example.mytranslator.BuildConfig
+com/example/mytranslator/MainActivity.java
+ com.example.mytranslator.MainActivity
+com/example/mytranslator/SecondActivity.java
+ com.example.mytranslator.SecondActivity
