@@ -2108,6 +2108,7 @@ id easeInOut
 id easeOut
 id east
 id edit_query
+id edit_text
 id elastic
 id end
 id endToStart
@@ -2325,6 +2326,8 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinner
+id spinner1
+id spinner2
 id spline
 id split_action_bar
 id spread
@@ -2416,6 +2419,7 @@ id visible_removing_fragment_view_tag
 id west
 id withText
 id withinBounds
+id word
 id wrap
 id wrap_content
 id wrap_content_constrained
