@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTranslator">
         <activity
-            android:name=".SecondActivity"
+            android:name=".WordDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

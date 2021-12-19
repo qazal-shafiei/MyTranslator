@@ -21,7 +21,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyTranslator" >
         <activity
-            android:name="com.example.mytranslator.SecondActivity"
+            android:name="com.example.mytranslator.WordDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.mytranslator.HomeActivity"
             android:exported="true" />
         <activity
             android:name="com.example.mytranslator.MainActivity"

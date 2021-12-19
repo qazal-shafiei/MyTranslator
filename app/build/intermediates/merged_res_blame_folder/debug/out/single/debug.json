@@ -20,8 +20,16 @@
         "source": "C:\\Users\\zahra\\Desktop\\translator\\app\\src\\main\\res\\layout\\activity_second.xml"
     },
     {
+        "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\drawable_search.png.flat",
+        "source": "C:\\Users\\zahra\\Desktop\\translator\\app\\src\\main\\res\\drawable\\search.png"
+    },
+    {
         "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\zahra\\Desktop\\translator\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_word_detail.xml.flat",
+        "source": "C:\\Users\\zahra\\Desktop\\translator\\app\\src\\main\\res\\layout\\activity_word_detail.xml"
     },
     {
         "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -42,6 +50,10 @@
     {
         "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\drawable_splash.jpg.flat",
         "source": "C:\\Users\\zahra\\Desktop\\translator\\app\\src\\main\\res\\drawable\\splash.jpg"
+    },
+    {
+        "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg.jpg.flat",
+        "source": "C:\\Users\\zahra\\Desktop\\translator\\app\\src\\main\\res\\drawable\\bg.jpg"
     },
     {
         "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
@@ -66,5 +78,9 @@
     {
         "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\zahra\\Desktop\\translator\\app\\build\\intermediates\\merged_res\\debug\\drawable_swap.png.flat",
+        "source": "C:\\Users\\zahra\\Desktop\\translator\\app\\src\\main\\res\\drawable\\swap.png"
     }
 ]

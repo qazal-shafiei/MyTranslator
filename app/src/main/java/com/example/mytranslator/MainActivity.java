@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             Intent splash = new Intent(MainActivity.this,
-                    SecondActivity.class);
+                    HomeActivity.class);
             startActivity(splash);
             finish();
         }, SPLASH_SCREEN_TIME_OUT);
