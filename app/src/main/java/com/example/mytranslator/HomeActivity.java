@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     private PowerSpinnerView powerSpinnerView1;
     private PowerSpinnerView powerSpinnerView2;
     private Button submitButton;
-    private String fromLanguage, toLanguage;
+    private String fromLanguage ="", toLanguage="";
     private EditText editText;
     private List<String> iconSpinnerItems = new ArrayList<>();
 
@@ -67,31 +67,35 @@ public class HomeActivity extends AppCompatActivity {
 
 
         submitButton.setOnClickListener(view -> {
+            if (fromLanguage == null || toLanguage == null || editText.getText().toString().trim().equals("")) {
+                makeToast("fill the blanks");
+                return;
+            }
+
+
             Intent showWordsDetail = new Intent(HomeActivity.this,
                     WordDetailActivity.class);
             getDataObservable().enqueue(new Callback<Model>() {
                 @Override
                 public void onResponse(Call<Model> call, Response<Model> response) {
                     int code = response.body().getResponse().getCode();
-                    String text = response.body().getData().getResults().get(0).getText();
-                    String titleEn = response.body().getData().getResults().get(0).getTitle_en();
-                    String source = response.body().getData().getResults().get(0).getSource();
-
-                    if (code == 200) {
+                    if (code == 200 && response.body().getData().getResults() != null && response.body().getData().getResults().size() != 0) {
+                        String text = response.body().getData().getResults().get(0).getText();
+                        String titleEn = response.body().getData().getResults().get(0).getTitle_en();
+                        String source = response.body().getData().getResults().get(0).getSource();
                         showWordsDetail.putExtra("text", text);
                         showWordsDetail.putExtra("title", editText.getText().toString());
                         showWordsDetail.putExtra("titleEn", titleEn);
                         showWordsDetail.putExtra("source", source);
                         startActivity(showWordsDetail);
                     } else {
-                        Toast.makeText(HomeActivity.this, "wrong request", Toast.LENGTH_SHORT).show();
+                        makeToast("wrong request");
                     }
                 }
 
                 @Override
                 public void onFailure(Call<Model> call, Throwable t) {
-                    Toast.makeText(HomeActivity.this, "wrong request", Toast.LENGTH_SHORT).show();
-                    System.out.println(t.toString());
+                    makeToast("wrong request");
                     call.cancel();
                 }
             });
@@ -129,8 +133,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private Call<Model> getDataObservable() {
-        System.out.println(editText.getText().toString().trim()+"exact"+findDB());
+        System.out.println(editText.getText().toString().trim() + "exact" + findDB());
         return ServiceGenerator.getRequestApi().getTranslation("68311.owiMM2FtLg8QuuiPU8UQdCOGi3Pqch7hQ0RL3br7", editText.getText().toString().trim(), "exact", findDB());
+    }
+
+    private void makeToast(String st) {
+        Toast.makeText(this, st, Toast.LENGTH_SHORT).show();
     }
 }
 
