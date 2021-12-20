@@ -8,10 +8,11 @@ public class Word {
     private String db;
     private String text;
 
-    public Word(String id, String title, String title_en, String db, String text) {
+    public Word(String id, String title, String title_en, String source, String db, String text) {
         this.id = id;
         this.title = title;
         this.title_en = title_en;
+        this.source = source;
         this.db = db;
         this.text = text;
     }

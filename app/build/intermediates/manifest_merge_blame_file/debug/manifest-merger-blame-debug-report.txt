@@ -11,54 +11,55 @@
 9-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:6:22-64
 12
 13    <application
-13-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:7:5-29:19
+13-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:8:5-32:19
 14        android:allowBackup="true"
-14-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:8:9-35
+14-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:9:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 15-->[androidx.core:core:1.7.0] C:\Users\zahra\.gradle\caches\transforms-3\107b48ead489d4dd0a48badb09d9592d\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:icon="@mipmap/ic_launcher"
-17-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:9:9-43
+17-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:10:9-43
 18        android:label="@string/app_name"
-18-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:10:9-41
+18-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:11:9-41
 19        android:roundIcon="@mipmap/ic_launcher_round"
-19-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:11:9-54
+19-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:12:9-54
 20        android:supportsRtl="true"
-20-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:12:9-35
-21        android:testOnly="true"
-22        android:theme="@style/Theme.MyTranslator" >
-22-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:13:9-50
+20-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:13:9-35
+21        android:theme="@style/Theme.MyTranslator"
+21-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:15:9-50
+22        android:usesCleartextTraffic="true" >
+22-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:14:9-44
 23        <activity
-23-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:14:9-16:39
+23-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:17:9-19:39
 24            android:name="com.example.mytranslator.WordDetailActivity"
-24-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:15:13-47
+24-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:18:13-47
 25            android:exported="true" />
-25-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:16:13-36
+25-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:19:13-36
 26        <activity
-26-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:17:9-19:39
+26-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:20:9-22:39
 27            android:name="com.example.mytranslator.HomeActivity"
-27-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:18:13-41
+27-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:21:13-41
 28            android:exported="true" />
-28-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:19:13-36
+28-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:22:13-36
 29        <activity
-29-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:20:9-28:20
+29-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:23:9-31:20
 30            android:name="com.example.mytranslator.MainActivity"
-30-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:21:13-41
+30-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:24:13-41
 31            android:exported="true" >
-31-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:22:13-36
+31-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:25:13-36
 32            <intent-filter>
-32-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:23:13-27:29
+32-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:26:13-30:29
 33                <action android:name="android.intent.action.MAIN" />
-33-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:24:17-69
-33-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:24:25-66
+33-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:27:17-69
+33-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:27:25-66
 34
 35                <category android:name="android.intent.category.LAUNCHER" />
-35-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:26:17-77
-35-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:26:27-74
+35-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:29:17-77
+35-->C:\Users\zahra\Desktop\translator\app\src\main\AndroidManifest.xml:29:27-74
 36            </intent-filter>
 37        </activity>
 38

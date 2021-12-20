@@ -1,16 +1,21 @@
 package com.example.mytranslator;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import com.example.mytranslator.model.Model;
 import com.example.mytranslator.request.ServiceGenerator;
 import com.skydoves.powerspinner.OnSpinnerItemSelectedListener;
 import com.skydoves.powerspinner.PowerSpinnerView;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -67,14 +72,26 @@ public class HomeActivity extends AppCompatActivity {
             getDataObservable().enqueue(new Callback<Model>() {
                 @Override
                 public void onResponse(Call<Model> call, Response<Model> response) {
-                    System.out.println(response.body().getResponse().getCode());
-                    System.out.println(response.body().getData().getResults().get(0).getText());
+                    int code = response.body().getResponse().getCode();
+                    String text = response.body().getData().getResults().get(0).getText();
+                    String titleEn = response.body().getData().getResults().get(0).getTitle_en();
+                    String source = response.body().getData().getResults().get(0).getSource();
 
-                    //      startActivity(showWordsDetail);
+                    if (code == 200) {
+                        showWordsDetail.putExtra("text", text);
+                        showWordsDetail.putExtra("title", editText.getText().toString());
+                        showWordsDetail.putExtra("titleEn", titleEn);
+                        showWordsDetail.putExtra("source", source);
+                        startActivity(showWordsDetail);
+                    } else {
+                        Toast.makeText(HomeActivity.this, "wrong request", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
                 @Override
                 public void onFailure(Call<Model> call, Throwable t) {
+                    Toast.makeText(HomeActivity.this, "wrong request", Toast.LENGTH_SHORT).show();
+                    System.out.println(t.toString());
                     call.cancel();
                 }
             });
@@ -112,6 +129,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private Call<Model> getDataObservable() {
+        System.out.println(editText.getText().toString().trim()+"exact"+findDB());
         return ServiceGenerator.getRequestApi().getTranslation("68311.owiMM2FtLg8QuuiPU8UQdCOGi3Pqch7hQ0RL3br7", editText.getText().toString().trim(), "exact", findDB());
     }
 }
