@@ -1,7 +1,8 @@
-com/example/mytranslator/model/Model.java
- com.example.mytranslator.model.Model
-com/example/mytranslator/model/Word.java
- com.example.mytranslator.model.Word
+com/example/mytranslator/MainActivity.java
+ com.example.mytranslator.MainActivity
+com/example/mytranslator/HomeActivity.java
+ com.example.mytranslator.HomeActivity
+ com.example.mytranslator.HomeActivity$1
 com/example/mytranslator/WordDetailActivity.java
  com.example.mytranslator.WordDetailActivity
 com/example/mytranslator/request/RequestApi.java
@@ -14,8 +15,7 @@ com/example/mytranslator/BuildConfig.java
  com.example.mytranslator.BuildConfig
 com/example/mytranslator/request/ServiceGenerator.java
  com.example.mytranslator.request.ServiceGenerator
-com/example/mytranslator/MainActivity.java
- com.example.mytranslator.MainActivity
-com/example/mytranslator/HomeActivity.java
- com.example.mytranslator.HomeActivity
- com.example.mytranslator.HomeActivity$1
+com/example/mytranslator/model/Word.java
+ com.example.mytranslator.model.Word
+com/example/mytranslator/model/Model.java
+ com.example.mytranslator.model.Model

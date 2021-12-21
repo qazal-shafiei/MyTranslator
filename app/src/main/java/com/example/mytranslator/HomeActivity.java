@@ -1,11 +1,13 @@
 package com.example.mytranslator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.mytranslator.model.Model;
@@ -25,9 +27,11 @@ public class HomeActivity extends AppCompatActivity {
     private PowerSpinnerView powerSpinnerView1;
     private PowerSpinnerView powerSpinnerView2;
     private Button submitButton;
-    private String fromLanguage ="", toLanguage="";
+    private String fromLanguage = "", toLanguage = "";
     private EditText editText;
     private List<String> iconSpinnerItems = new ArrayList<>();
+    private ImageView change;
+    private ConstraintLayout bg;
 
 
     @Override
@@ -49,6 +53,8 @@ public class HomeActivity extends AppCompatActivity {
         powerSpinnerView1.setItems(iconSpinnerItems);
         powerSpinnerView2.setItems(iconSpinnerItems);
         submitButton = findViewById(R.id.submit);
+        change = findViewById(R.id.change);
+        bg = findViewById(R.id.bg);
 
     }
 
@@ -60,11 +66,37 @@ public class HomeActivity extends AppCompatActivity {
                     fromLanguage = newItem;
 
                 });
+
         powerSpinnerView2.setOnSpinnerItemSelectedListener(
                 (OnSpinnerItemSelectedListener<String>) (oldIndex, oldItem, newIndex, newItem) -> {
                     toLanguage = newItem;
                 });
 
+        change.setOnClickListener(view -> {
+            powerSpinnerView1.dismiss();
+            powerSpinnerView2.dismiss();
+
+            String temp;
+            temp = fromLanguage;
+            fromLanguage = toLanguage;
+            toLanguage = temp;
+
+            powerSpinnerView1.setPreferenceName(fromLanguage);
+            powerSpinnerView2.setPreferenceName(toLanguage);
+            powerSpinnerView1.notifyItemSelected(iconSpinnerItems.indexOf(fromLanguage) , fromLanguage);
+            powerSpinnerView2.notifyItemSelected(iconSpinnerItems.indexOf(toLanguage) , toLanguage);
+
+        });
+
+        editText.setOnClickListener(view -> {
+            powerSpinnerView1.dismiss();
+            powerSpinnerView2.dismiss();
+        });
+
+        bg.setOnClickListener(view -> {
+            powerSpinnerView1.dismiss();
+            powerSpinnerView2.dismiss();
+        });
 
         submitButton.setOnClickListener(view -> {
             if (fromLanguage == null || toLanguage == null || editText.getText().toString().trim().equals("")) {
