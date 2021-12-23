@@ -70,6 +70,9 @@ public class HomeActivity extends AppCompatActivity {
         powerSpinnerView2.setOnSpinnerItemSelectedListener(
                 (OnSpinnerItemSelectedListener<String>) (oldIndex, oldItem, newIndex, newItem) -> {
                     toLanguage = newItem;
+                    if (fromLanguage.equals("Persian") && toLanguage.equals("English")){
+                        makeToast("dehkhoda");
+                    }
                 });
 
         change.setOnClickListener(view -> {
@@ -81,11 +84,14 @@ public class HomeActivity extends AppCompatActivity {
             fromLanguage = toLanguage;
             toLanguage = temp;
 
-            powerSpinnerView1.setPreferenceName(fromLanguage);
-            powerSpinnerView2.setPreferenceName(toLanguage);
+            System.out.println(fromLanguage +"__1111111__"+toLanguage);
+
+       //     powerSpinnerView1.setPreferenceName(fromLanguage);
+       //     powerSpinnerView2.setPreferenceName(toLanguage);
             powerSpinnerView1.notifyItemSelected(iconSpinnerItems.indexOf(fromLanguage) , fromLanguage);
             powerSpinnerView2.notifyItemSelected(iconSpinnerItems.indexOf(toLanguage) , toLanguage);
 
+            System.out.println(fromLanguage +"__2222222__"+toLanguage);
         });
 
         editText.setOnClickListener(view -> {
@@ -152,20 +158,19 @@ public class HomeActivity extends AppCompatActivity {
     private String setToLanguage(String from) {
         switch (toLanguage) {
             case "Persian": {
-                return from + "2fa";
+                return from+"2fa";
             }
             case "Arabic": {
                 return from + "2ar";
             }
             case "English": {
-                return from + "2en";
+                return  "dehkhoda";
             }
         }
         return null;
     }
 
     private Call<Model> getDataObservable() {
-        System.out.println(editText.getText().toString().trim() + "exact" + findDB());
         return ServiceGenerator.getRequestApi().getTranslation("68311.owiMM2FtLg8QuuiPU8UQdCOGi3Pqch7hQ0RL3br7", editText.getText().toString().trim(), "exact", findDB());
     }
 
